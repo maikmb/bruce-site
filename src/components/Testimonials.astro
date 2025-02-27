@@ -1,0 +1,48 @@
+---
+const testimonials = [
+  {
+    name: "Carlos Silva",
+    position: "Proprietário de Quiosque",
+    content: "O Bruce transformou completamente o atendimento no meu quiosque. Reduzi minha equipe e aumentei a satisfação dos clientes. O pagamento via Pix é um diferencial incrível!",
+    image: "https://randomuser.me/api/portraits/men/1.jpg"
+  },
+  {
+    name: "Ana Oliveira",
+    position: "Gerente de Restaurante",
+    content: "Desde que implementamos o Bruce, nosso fluxo de atendimento melhorou significativamente. Os relatórios nos ajudam a tomar decisões melhores e o sistema é muito fácil de usar.",
+    image: "https://randomuser.me/api/portraits/women/2.jpg"
+  },
+  {
+    name: "Roberto Santos",
+    position: "Dono de Delivery",
+    content: "O Bruce nos ajudou a organizar melhor os pedidos e reduzir erros. O dashboard Kanban é perfeito para visualizar todo o processo, do pedido à entrega.",
+    image: "https://randomuser.me/api/portraits/men/3.jpg"
+  }
+];
+---
+
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl font-bold mb-4">O que Nossos Clientes Dizem</h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Veja como o Bruce está transformando negócios por todo o Brasil.
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {testimonials.map(testimonial => (
+        <div class="bg-gray-50 p-8 rounded-xl shadow-sm">
+          <div class="flex items-center mb-4">
+            <img src={testimonial.image} alt={testimonial.name} class="w-12 h-12 rounded-full mr-4" />
+            <div>
+              <h3 class="font-semibold">{testimonial.name}</h3>
+              <p class="text-gray-600 text-sm">{testimonial.position}</p>
+            </div>
+          </div>
+          <p class="text-gray-700 italic">"{testimonial.content}"</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

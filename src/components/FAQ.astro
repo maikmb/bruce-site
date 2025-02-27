@@ -1,0 +1,50 @@
+---
+const faqs = [
+  {
+    question: "Como funciona o Bruce?",
+    answer: "O Bruce é um aplicativo web que funciona através de QR Code. Os clientes escaneiam o código, acessam o cardápio digital, fazem pedidos e pagam diretamente pelo celular, sem precisar baixar nenhum aplicativo."
+  },
+  {
+    question: "Quanto custa o Bruce?",
+    answer: "O Bruce tem um preço fixo de R$100 por mês por estabelecimento, sem taxas adicionais ou custos ocultos."
+  },
+  {
+    question: "Preciso de equipamentos especiais?",
+    answer: "Não. Você só precisa imprimir os QR Codes que fornecemos e colocá-los nas mesas. Para a cozinha/bar, basta um computador ou tablet para visualizar os pedidos."
+  },
+  {
+    question: "Como é feito o pagamento via Pix?",
+    answer: "O sistema gera automaticamente um QR Code Pix para o valor da conta. O cliente escaneia com seu aplicativo bancário e o pagamento é confirmado em segundos."
+  },
+  {
+    question: "Posso testar antes de assinar?",
+    answer: "Sim! Oferecemos um período de teste gratuito de 15 dias para que você possa experimentar todas as funcionalidades do Bruce."
+  },
+  {
+    question: "O Bruce funciona offline?",
+    answer: "O Bruce precisa de conexão com a internet para funcionar. Recomendamos que seu estabelecimento tenha uma conexão Wi-Fi estável."
+  }
+];
+---
+
+<section class="py-20 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl font-bold mb-4">Perguntas Frequentes</h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Tire suas dúvidas sobre o Bruce.
+      </p>
+    </div>
+    
+    <div class="max-w-3xl mx-auto">
+      <div class="space-y-6">
+        {faqs.map((faq, index) => (
+          <div class="bg-white p-6 rounded-xl shadow-sm">
+            <h3 class="text-xl font-semibold mb-3">{faq.question}</h3>
+            <p class="text-gray-600">{faq.answer}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

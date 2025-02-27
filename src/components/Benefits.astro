@@ -1,0 +1,45 @@
+---
+const benefits = [
+  {
+    title: "Atendimento Mais Rápido",
+    description: "Reduza o tempo de espera dos clientes com pedidos feitos diretamente pelo celular.",
+    icon: "⚡"
+  },
+  {
+    title: "Redução de Custos",
+    description: "Diminua a folha de pagamento e otimize a equipe do seu estabelecimento.",
+    icon: "💰"
+  },
+  {
+    title: "Maior Controle",
+    description: "Tenha controle total sobre vendas, estoque e desempenho do seu negócio.",
+    icon: "📋"
+  },
+  {
+    title: "Experiência Moderna",
+    description: "Ofereça uma experiência digital e inovadora para seus clientes.",
+    icon: "✨"
+  }
+];
+---
+
+<section id="benefits" class="py-20 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl font-bold mb-4">Benefícios para seu Estabelecimento</h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Descubra como o Bruce pode transformar a operação do seu negócio.
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {benefits.map(benefit => (
+        <div class="bg-white p-8 rounded-xl shadow-sm text-center">
+          <div class="text-4xl mb-4">{benefit.icon}</div>
+          <h3 class="text-xl font-semibold mb-3">{benefit.title}</h3>
+          <p class="text-gray-600">{benefit.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

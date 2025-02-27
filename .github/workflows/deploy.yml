@@ -25,6 +25,9 @@ jobs:
       - name: Build the site
         run: npm run build
 
+      - name: Configure git pull strategy
+        run: git config pull.rebase false  # or true, or ff-only based on your preference 
+
       - name: Deploy to GitHub Pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

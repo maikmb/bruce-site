@@ -4,7 +4,8 @@ on:
   push:
     branches:
       - main  # Altere para a branch que você usa para desenvolvimento
-
+  workflow_dispatch: 
+    
 jobs:
   deploy:
     runs-on: ubuntu-latest

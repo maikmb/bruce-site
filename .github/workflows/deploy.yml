@@ -34,7 +34,7 @@ jobs:
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
-          git pull origin gh-pages --allow-unrelated-histories
+          git checkout -B gh-pages
           git add -A
           git commit -m "Deploy to GitHub Pages"
           git push origin gh-pages --force
